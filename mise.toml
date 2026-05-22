@@ -4,6 +4,9 @@ min_version = "2024.1.1"
 [env]
 _.path = ["./target/debug", "./node_modules/.bin"]
 
+[settings]
+npm.package_manager = "npm"
+
 [tools]
 actionlint = "latest"
 age = "latest"
@@ -21,7 +24,6 @@ gh = "latest"
 hk = "latest"
 jq = "latest"
 fd = "latest"
-lua-language-server = "latest"
 stylua = "latest"
 "npm:markdownlint-cli" = "latest"
 prettier = "3"
@@ -34,6 +36,16 @@ taplo = "latest"
 wait-for-gh-rate-limit = "latest"
 sops = "latest"
 node = "24"
+
+[tool_alias]
+lua-language-server = "github:LuaLS/lua-language-server"
+
+[tools.lua-language-server]
+version = "latest"
+bin_path = "bin"
+
+[tools.lua-language-server.platforms]
+windows-arm64 = { asset_pattern = "lua-language-server-*-win32-x64.zip" }
 
 [task_config]
 includes = ["tasks.toml", "xtasks"]

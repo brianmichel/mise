@@ -612,7 +612,7 @@ provenance = "github-attestations"
 
 [[tools.lua-language-server]]
 version = "3.18.2"
-backend = "aqua:LuaLS/lua-language-server"
+backend = "github:LuaLS/lua-language-server"
 
 [tools.lua-language-server."platforms.linux-arm64"]
 checksum = "sha256:273af33f26f4a1143f27c96d9f9e1188aba619c71e0807042134f66b4bd27f24"
